@@ -118,7 +118,7 @@ def transcribe_audio(filename):
         return transcription.text
 
 # Initialize OpenAI client
-client = OpenAI()
+client = OpenAI() #store your OpenAI API in your Environmental Variables or add here
 
 # Set ElevenLabs API key
 clnt = ElevenLabs(api_key="Your API Key")
