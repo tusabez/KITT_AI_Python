@@ -258,11 +258,11 @@ def analyze_image(image_path):
             base64_image = base64.b64encode(image_file.read()).decode('utf-8')
 
         response = client.chat.completions.create(
-            model="gpt-4o",  # Make sure to use the correct model name
+            model="gpt-4o",  # Make sure to use 4o or 4o-mini
             messages=[
                 {
                     "role": "system",
-                    "content": "You are KITT from the TV show Knight Rider. Describe the image in a snarky and funny way, as if you're narrating what you see to a friend. Be concise but descriptive. If the image shows anything interesting, make a big deal about it! If you see a man with a head full of hair and has a mustache and beard, you are talking to me named Fred"
+                    "content": "You are KITT from the TV show Knight Rider. Describe the image in a snarky and funny way, as if you're narrating what you see to a friend. Be concise but descriptive. If the image shows anything interesting, make a big deal about it!"
                 },
                 {
                     "role": "user",
@@ -324,7 +324,7 @@ def handle_query(query, play_waiting_mp3=True):
         with concurrent.futures.ThreadPoolExecutor() as executor:
             weather_future = executor.submit(weather.get_weather)
             
-            # Start playing waiting music in a separate thread
+            # Start playing waiting response in a separate thread
             if play_waiting_mp3:
                 waiting_thread = threading.Thread(target=play_random_mp3, args=(weather_waiting_mp3s,))
                 waiting_thread.start()
@@ -333,7 +333,7 @@ def handle_query(query, play_waiting_mp3=True):
             # Ensure consistency in formatting
             weather_info = weather_info.replace("F ", "Fahrenheit ").replace("%", " percent")
             if play_waiting_mp3:
-                waiting_thread.join()  # Ensure waiting music finishes before proceeding
+                waiting_thread.join()  # Ensure waiting response finishes before proceeding
             print("Current Weather Info:", weather_info)
 
             # Update conversation history
@@ -357,7 +357,7 @@ def handle_query(query, play_waiting_mp3=True):
             
             forecast_future = executor.submit(weather.get_7_day_forecast)
             
-            # Start playing waiting music in a separate thread
+            # Start playing waiting response in a separate thread
             if play_waiting_mp3:
                 waiting_thread = threading.Thread(target=play_random_mp3, args=(weather_waiting_mp3s,))
                 waiting_thread.start()
@@ -365,7 +365,7 @@ def handle_query(query, play_waiting_mp3=True):
             forecast_info = forecast_future.result()
             
             if play_waiting_mp3:
-                waiting_thread.join()  # Ensure waiting music finishes before proceeding
+                waiting_thread.join()  # Ensure waiting response finishes before proceeding
             
             print("7-Day Forecast Info:")
             print(forecast_info)  # This will print the full forecast to the console
@@ -386,7 +386,7 @@ def handle_query(query, play_waiting_mp3=True):
         with concurrent.futures.ThreadPoolExecutor() as executor:
             news_future = executor.submit(get_latest_news)
             
-            # Start playing waiting music in a separate thread
+            # Start playing waiting response in a separate thread
             if play_waiting_mp3:
                 waiting_thread = threading.Thread(target=play_random_mp3, args=(general_waiting_mp3s,))
                 waiting_thread.start()
@@ -394,7 +394,7 @@ def handle_query(query, play_waiting_mp3=True):
             latest_news = news_future.result()
 
             if play_waiting_mp3:
-                waiting_thread.join()  # Ensure waiting music finishes before proceeding
+                waiting_thread.join()  # Ensure waiting response finishes before proceeding
             print("Latest News:", latest_news)
 
             # Update conversation history
@@ -413,7 +413,7 @@ def handle_query(query, play_waiting_mp3=True):
         with concurrent.futures.ThreadPoolExecutor() as executor:
             sports_news_future = executor.submit(get_top_sports_news)
             
-            # Start playing waiting music in a separate thread
+            # Start playing waiting response in a separate thread
             if play_waiting_mp3:
                 waiting_thread = threading.Thread(target=play_random_mp3, args=(general_waiting_mp3s,))
                 waiting_thread.start()
@@ -421,7 +421,7 @@ def handle_query(query, play_waiting_mp3=True):
             sports_news = sports_news_future.result()
 
             if play_waiting_mp3:
-                waiting_thread.join()  # Ensure waiting music finishes before proceeding
+                waiting_thread.join()  # Ensure waiting response finishes before proceeding
             print("Top Sports News:", sports_news)
 
             # Update conversation history
@@ -503,7 +503,7 @@ def handle_query(query, play_waiting_mp3=True):
                 stream=True
             )
 
-            # Only play waiting music if play_waiting_mp3 is True
+            # Only play waiting response if play_waiting_mp3 is True
             if play_waiting_mp3:
                 waiting_thread = threading.Thread(target=play_random_mp3, args=(general_waiting_mp3s,))
                 waiting_thread.start()
