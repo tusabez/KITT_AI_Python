@@ -15,8 +15,8 @@ def get_weather():
     # The order of variables in hourly or daily is important to assign them correctly below
     url = "https://api.open-meteo.com/v1/forecast"
     params = {
-        "latitude": 33.7456,
-        "longitude": -117.8678,
+        "latitude": 34.0459, # enter your latitude
+        "longitude": 118.2426, # enter your longitude
         "current": ["temperature_2m", "relative_humidity_2m", "wind_speed_10m"],
         "temperature_unit": "fahrenheit",
         "wind_speed_unit": "mph",
