@@ -118,10 +118,10 @@ def transcribe_audio(filename):
         return transcription.text
 
 # Initialize OpenAI client
-client = OpenAI() #store your OpenAI API in your Environmental Variables or add here
+client = OpenAI() #store your OpenAI API key in your Environmental Variables or add here
 
 # Set ElevenLabs API key
-clnt = ElevenLabs(api_key="Your API Key")
+clnt = ElevenLabs(api_key="Your API Key") # Replace with your ElevenLabs API key or store in your environmental variables 
 
 # Load initial conversation history
 first_line, conversation_history = open_file('chatbot1.txt')
@@ -638,7 +638,7 @@ def main_loop():
                     print("KITT asked a question. Waiting for user response...")
             detector.reset()
 
-# Initialize the bulb
+# Initialize the bulb. Using a Tapo TP-Link L535 smart bulb
 bulb = setup_bulb("Your bulb IP Address", "Your email", "Your password") # Replace with your bulb's IP address, email, and password
 
 if bulb is None:
