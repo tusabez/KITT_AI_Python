@@ -50,7 +50,7 @@ def get_7_day_forecast():
     # Make sure all required weather variables are listed here
     url = "https://api.open-meteo.com/v1/forecast"
     params = {
-        "latitude": 33.7456,
+        "latitude": 33.7456,# change values to your coordinates 
         "longitude": -117.8678,
         "daily": ["temperature_2m_max", "temperature_2m_min", "weathercode"],
         "temperature_unit": "fahrenheit",
@@ -95,7 +95,7 @@ def get_7_day_forecast():
             95: "Thunderstorm", 96: "Thunderstorm with slight hail", 99: "Thunderstorm with heavy hail"
         }
 
-        forecast_info = "Here's the seven-day forecast for Santa Ana:\n"
+        forecast_info = "Here's the seven-day forecast for Los Angeles :\n" #change to your city name 
         for index, row in daily_dataframe.iterrows():
             day_name = row['date'].strftime('%A')
             weather_desc = weather_descriptions.get(int(row['weathercode']), "Unknown weather")
