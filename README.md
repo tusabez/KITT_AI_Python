@@ -71,7 +71,7 @@ To run this project, you'll need the following Python libraries:
    ```bash
    python kitt_main.py
 
-##Usage
+## Usage
 
 Once the script is running, KITT will listen for the wake word "Hey KITT". After activation, you can interact with KITT using natural language commands such as:
 
