@@ -79,7 +79,7 @@ To run this project, you'll need the following Python libraries:
    Start the main loop:
 
    ```bash
-   python kitt_main.py
+   python kitt.py
 
 ## Usage
 
