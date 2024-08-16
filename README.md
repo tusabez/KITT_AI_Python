@@ -59,6 +59,7 @@ To run this project, you'll need the following Python libraries:
    ElevenLabs: Store your ElevenLabs API key in your environment variables or add it directly to the script.
 
 5. **Create Your KITT Voice**
+   
    You will need to create your own KITT voice since the original voice cannot be legally distributed. You can do this by:
 
    Obtaining voice samples from the "Knight Rider" TV show or the "Knight Rider 2000" movie.
