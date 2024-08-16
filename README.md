@@ -64,7 +64,7 @@ To run this project, you'll need the following Python libraries:
 
    Obtaining voice samples from the "Knight Rider" TV show or the "Knight Rider 2000" movie.
    
-   Using ElevenLabs' Instant Voice feature to create a voice that mimics KITT.
+   Using ElevenLabs' Instant Voice Clone feature to create a voice that mimics KITT.
    
    Note: Please do not publicly share the voice you create to avoid any potential copyright issues.
 
