@@ -47,19 +47,23 @@ To run this project, you'll need the following Python libraries:
 2. **Install Dependencies**
 
    ```bash
+   pip install openai elevenlabs pyaudio numpy sounddevice soundfile opencv-python requests
+
+   If you need the updated pyl530 library, you can install it directly from the GitHub repository:
+   ```bash
    pip install git+https://github.com/almottier/TapoP100.git
-3. **Set Up Keys**
+4. **Set Up Keys**
 
    OpenAI: Store your OpenAI API key in your environment variables or add it directly to the script.
    ElevenLabs: Store your ElevenLabs API key in your environment variables or add it directly to the script.
 
-4. **Configure Smart Bulb (Optional)**
+5. **Configure Smart Bulb (Optional)**
 
    If you want to control a Tapo TP-Link smart bulb, you'll need to configure the bulb's IP address, your email, and your password in the script:
 
    ```bash
    bulb = setup_bulb("Your bulb IP Address", "Your email", "Your password")
-5. **Run the script**
+6. **Run the script**
 
    Start the main loop:
 
