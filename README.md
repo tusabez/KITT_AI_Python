@@ -16,9 +16,9 @@ Welcome to the KITT AI project! This project brings the famous KITT AI from the 
 
 > **Note:** All scripts and MP3 files must be in the same folder for the project to work correctly.
 
-- `kitt_main.py`: The main script to run KITT AI.
-- `modules/`: Contains various helper modules such as `weather.py` and `news.py`.
-- `sounds/`: Directory containing various MP3 files used for waiting responses and sound effects.
+- `kitt.py`: The main script to run KITT AI.
+- `modules/`: Various helper modules such as `weather.py` and `news.py`.
+- `sounds/`: Various MP3 files used for waiting responses and sound effects.
 - `chatbot1.txt`: Stores conversation history for the AI.
 
 ## Requirements
