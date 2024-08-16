@@ -58,13 +58,22 @@ To run this project, you'll need the following Python libraries:
    OpenAI: Store your OpenAI API key in your environment variables or add it directly to the script.
    ElevenLabs: Store your ElevenLabs API key in your environment variables or add it directly to the script.
 
-5. **Configure Smart Bulb (Optional)**
+5. **Create Your KITT Voice**
+   You will need to create your own KITT voice since the original voice cannot be legally distributed. You can do this by:
+
+   Obtaining voice samples from the "Knight Rider" TV show or the "Knight Rider 2000" movie.
+   
+   Using ElevenLabs' Instant Voice feature to create a voice that mimics KITT.
+   
+   Note: Please do not publicly share the voice you create to avoid any potential copyright issues.
+
+7. **Configure Smart Bulb (Optional)**
 
    If you want to control a Tapo TP-Link smart bulb, you'll need to configure the bulb's IP address, your email, and your password in the script:
 
    ```bash
    bulb = setup_bulb("Your bulb IP Address", "Your email", "Your password")
-6. **Run the script**
+8. **Run the script**
 
    Start the main loop:
 
