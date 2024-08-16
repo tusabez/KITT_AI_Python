@@ -53,7 +53,7 @@ To run this project, you'll need the following Python libraries:
    OpenAI: Store your OpenAI API key in your environment variables or add it directly to the script.
    ElevenLabs: Store your ElevenLabs API key in your environment variables or add it directly to the script.
 
-4. **Configure Smart Bulb (Optional)
+4. **Configure Smart Bulb (Optional)**
 
    If you want to control a Tapo TP-Link smart bulb, you'll need to configure the bulb's IP address, your email, and your password in the script:
 
@@ -77,21 +77,21 @@ Once the script is running, KITT will listen for the wake word "Hey KITT". After
 "What’s the latest Lakers score?"
 Since KITT is powered by GPT-4o, you can ask him about anything, and he'll respond in character as KITT from "Knight Rider."
 
-##Compatibility
+## Compatibility
 
 This project was tested on a Windows 11 computer, but it can be adapted to work on a Raspberry Pi 5 with some modifications to the code. If you're planning to run this on a Raspberry Pi, you might need to adjust the setup for audio input/output, camera access, and performance optimizations.
 
-##Troubleshooting
+## Troubleshooting
 
 Wake Word Detection Issues: Ensure your microphone is working correctly and that the wake word model is properly initialized.
 Smart Bulb Control Issues: Verify the IP address, email, and password for the smart bulb are correct and the bulb is reachable on your network.
 API Key Errors: Double-check that your API keys are correctly stored and valid.
 
-##Contributing
+## Contributing
 
 Feel free to submit issues or pull requests if you find bugs or want to add new features. Contributions are welcome! While I’m a Lakers fan and have included functions to get Lakers scores, you can easily modify the code to follow your favorite team.
 
-##License
+## License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
 
