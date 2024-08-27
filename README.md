@@ -47,7 +47,7 @@ To run this project, you'll need the following Python libraries:
 2. **Install Dependencies**
 
    ```bash
-   pip install openai elevenlabs pyaudio numpy sounddevice soundfile opencv-python requests openwakeword pytz
+   pip install openai elevenlabs pyaudio numpy sounddevice soundfile opencv-python requests openwakeword pytz nba.api pandas openmeteo_requests request-cache retry-requests
    ```
 
    If you need the updated pyl530 library, you can install it directly from the GitHub repository:
