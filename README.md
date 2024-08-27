@@ -101,6 +101,7 @@ This project was tested on a Windows 11 computer, but it can be adapted to work 
 Wake Word Detection Issues: Ensure your microphone is working correctly and that the wake word model is properly initialized.
 Smart Bulb Control Issues: Verify the IP address, email, and password for the smart bulb are correct and the bulb is reachable on your network.
 API Key Errors: Double-check that your API keys are correctly stored and valid.
+Run models.py to download needed models to have the wakeword work. This is only done once.
 
 ## Contributing
 
