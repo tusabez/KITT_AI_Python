@@ -94,7 +94,7 @@ Since KITT is powered by GPT-4o, you can ask him about anything, and he'll respo
 
 ## Compatibility
 
-This project was tested on a Windows 11 computer, but it can be adapted to work on a Raspberry Pi 5 with some modifications to the code. If you're planning to run this on a Raspberry Pi, you might need to adjust the setup for audio input/output, camera access, and performance optimizations. Update: (use KITT_Pi.py instead of KITT.py for the Raspberry Pi 5 as it has been optimized)
+This project was tested on a Windows 11 computer, but it can be adapted to work on a Raspberry Pi 5 with some modifications to the code. I used a USB microphone and Raspberry Pi camera module 3. If you're planning to run this on a Raspberry Pi, you might need to adjust the setup for audio input/output, camera access, and performance optimizations. Update: (use KITT_Pi.py instead of KITT.py for the Raspberry Pi 5 as it has been optimized for it).
 
 ## Troubleshooting
 
