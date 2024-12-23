@@ -300,6 +300,45 @@ def handle_query(query, play_waiting_mp3=True):
             audio_stream = text_to_speech_stream(error_message)
             play_audio(audio_stream)
 
+    elif "lakers score" in query.lower():
+        # Run Lakers2.py script and read the result
+        subprocess.run(["python", "Lakers2.py"])
+        with open("lakers_output.txt", "r") as outfile:
+            lakers_score = outfile.readline().strip()
+            mp3_file = outfile.readline().strip()
+
+        if lakers_score:
+            print("Lakers Score:", lakers_score)
+
+            # Update conversation history
+            conversation_history_lines = conversation_history.split('\n')
+            conversation_history_lines = conversation_history_lines[-20:]
+            conversation_history_lines.append(f"User: {query}\nBot: {lakers_score}\n")
+            conversation_history = '\n'.join(conversation_history_lines)
+            write_file('chatbot1.txt', first_line, conversation_history)
+
+            # Generate and play speech response concurrently
+            with concurrent.futures.ThreadPoolExecutor() as executor:
+                audio_stream_future = executor.submit(text_to_speech_stream, lakers_score)
+                play_audio(audio_stream_future.result())
+
+            # Play the selected outcome MP3 file
+            if mp3_file:
+                play_audio_file(mp3_file)
+        else:
+            error_message = "No recent Lakers game found."
+            print(error_message)
+            
+            # Update conversation history
+            conversation_history_lines = conversation_history.split('\n')
+            conversation_history_lines = conversation_history_lines[-20:]
+            conversation_history_lines.append(f"User: {query}\nBot: {error_message}\n")
+            conversation_history = '\n'.join(conversation_history_lines)
+            write_file('chatbot1.txt', first_line, conversation_history)
+
+            audio_stream = text_to_speech_stream(error_message)
+            play_audio(audio_stream)
+
     elif "weather now" in query.lower():
         # Get current weather info and generate speech concurrently
         with concurrent.futures.ThreadPoolExecutor() as executor:
